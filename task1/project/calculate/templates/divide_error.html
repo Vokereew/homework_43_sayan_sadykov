@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            list-style-type: none ;
+        }
+    </style>
+</head>
+<body>
+    <form action='' method="post">
+        {% csrf_token %}
+        <div style="margin-left: 30px">
+            <label for="staticEmail">First number</label>
+            <div>
+                <input type="number" id="staticEmail" name="first" value="">
+            </div>
+        </div>
+
+        <div style="margin:15px 30px">
+            <label for="staticSecond">Second number</label>
+                <div>
+                    <input type="number" id="staticSecond" name="second" value="">
+                </div>
+        </div>
+
+        <div>
+            <ul>
+                <li>
+                    <input type="radio" id="staticAdd" name="operation" value="add">
+                    <label for="staticAdd">add</label>
+                </li>
+
+                <li>
+                    <input type="radio" id="staticSubtract" name="operation" value="subtract">
+                    <label for="staticSubtract">subtract</label>
+                </li>
+
+                <li>
+                    <input type="radio" id="staticMultiply" name="operation" value="multiply">
+                    <label for="staticMultiply">multiply</label>
+                </li>
+
+                <li>
+                    <input type="radio" id="staticDivide" name="operation" value="divide">
+                    <label for="staticDivide">divide</label>
+                </li>
+            </ul>
+
+            <button type="submit" style="margin-left:35px">calculate</button>
+        </div>
+    </form>
+
+    <div>
+        <h1>На 0 делить нельзя</h1>
+    </div>
+</body>
+</html>
